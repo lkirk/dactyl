@@ -1,0 +1,24 @@
+name: Build Dactyl Jar
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install clojure tools
+        uses: DeLaGuardo/setup-clojure@13.0
+        with:
+          cli: 1.12.0.1488
+
+      - name: Build jar
+        run: clojure -T:build uber
+
+      - name: Upload jar
+        uses: actions/upload-artifact@v4
+        with:
+          name: uberjar
+          path: target/dactyl-*-standalone.jar
