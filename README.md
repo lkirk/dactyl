@@ -1,6 +1,6 @@
 ## Dactyl Manuform
 
-This is my personal fork of (tshort/dactyl-keyboard)[https://github.com/tshort/dactyl-keyboard]. Please refer to the original for licensing, etc. This version is parameterized by config files and does not require any patching or `lein`.
+This is my personal fork of [tshort/dactyl-keyboard](https://github.com/tshort/dactyl-keyboard). Please refer to the original for licensing, etc. This version is parameterized by config files and does not require any patching or `lein`.
 
 ## Development
 
@@ -12,7 +12,22 @@ Development can be done in the REPL:
 clj -M:repl
 ```
 
-## Running
+Building the uberjar:
 
 ```
+clj -T:build uber
+```
+
+## Running
+
+Running uncompiled:
+
+```
+clj -M:main [options]
+```
+
+Running jar:
+
+```
+java -jar <jarfile name> [options]
 ```
