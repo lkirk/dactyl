@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+REPO_DIR="$( dirname -- "$( readlink -f -- "$0"; )"; )"
+JAR="$(find "${REPO_DIR}/target" -name '*-standalone.jar' | sort -V | tail -1)"
+
+java -jar "${JAR}" "$@"

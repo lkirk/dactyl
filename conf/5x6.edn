@@ -1,0 +1,4 @@
+#:dactyl{:nrows 5
+         :ncols 6
+         :centercol 2
+         :keyboard-z-offset 16}
